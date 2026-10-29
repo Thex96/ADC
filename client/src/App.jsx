@@ -148,7 +148,7 @@ function useDevices() {
   }, []);
   useEffect(() => {
     refresh();
-    const timer = window.setInterval(refresh, 30000);
+    const timer = window.setInterval(refresh, 5000);
     return () => window.clearInterval(timer);
   }, [refresh]);
   return { devices, setDevices, loading, error, refresh };
@@ -294,7 +294,7 @@ function DeviceDetails({ notify }) {
   }, [id]);
   useEffect(() => {
     refresh();
-    const timer = window.setInterval(refresh, 30000);
+    const timer = window.setInterval(refresh, 5000);
     return () => window.clearInterval(timer);
   }, [refresh]);
   const visibleHistory = useMemo(() => {
